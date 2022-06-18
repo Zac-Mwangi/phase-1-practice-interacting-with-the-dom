@@ -1,3 +1,4 @@
+// INITIALIZE THE VALUES
 let add = document.getElementById("plus");
 let sub = document.getElementById("minus");
 let show = document.getElementById("counter");
@@ -44,7 +45,7 @@ pause.addEventListener("click", () => {
     heartlike.disabled = true;
     submit.disabled = true;
     ResetIntervals();
-  } else if (pause.innerText === "Resume") {
+  } else {
     pause.innerText = "pause";
     add.disabled = false;
     sub.disabled = false;
