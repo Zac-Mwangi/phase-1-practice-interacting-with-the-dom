@@ -5,20 +5,23 @@ let counterrValue = parseInt(counterr.innerHTML);
 let likes = document.querySelector(".likes");
 let comment = document.getElementById("list");
 let submit = document.getElementById("submit");
-let add = document.getElementById("plus");
-add.addEventListener("click", ()=> {
+
+let plus = document.getElementById("plus");
+plus.addEventListener("click", ()=> {
   return (counterr.innerHTML = counterrValue++);
 });
 
-let sub = document.getElementById("minus");
-sub.addEventListener("click", () => {
+let minus = document.getElementById("minus");
+minus.addEventListener("click", () => {
   return counterr.innerHTML = counterrValue--;
 });
 
 let heartlike = document.getElementById("heart");
 heartlike.addEventListener("click", () => {
   li = document.createElement("li");
-  li.innerHTML = `${counterr.innerHTML = counterrValue++} has been liked ${heartlike.innerHTML + " 1 times"}`;
+    let c = counterrValue++
+    let heart = heartlike.innerHTML;
+  li.innerHTML = c + " has been liked "+ heart + " 1 times";
   likes.appendChild(li);
 });
 
@@ -44,16 +47,16 @@ pause.addEventListener("click", () => {
 if (pause.innerText === "pause") {
 //   set the TEXT to resume
     pause.innerText = "resume";
-    add.dissabled = true;
-    sub.disabled = true;
+    plus.dissabled = true;
+    minus.disabled = true;
     heartlike.disabled = true;
     submit.disabled = true;
     clearInterval(intervals);
 } else {
 //  set the TEXT to pause
     pause.innerText = "pause";
-    add.disabled = false;
-    sub.disabled = false;
+    plus.disabled = false;
+    minus.disabled = false;
     heartlike.disabled = false;
     submit.disabled = false;
     intervals = setInterval(counter, 1000);
