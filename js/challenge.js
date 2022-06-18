@@ -11,21 +11,18 @@ let submit = document.getElementById("submit");
 let pause = document.getElementById("pause");
 let intervals = setInterval(counter, 1000);
 
-add.addEventListener("click", function counter() {
+add.addEventListener("click", ()=> {
   return (show.innerHTML = showValue++);
 });
 
 sub.addEventListener("click", () => {
-  show.innerHTML = showValue--;
+  return show.innerHTML = showValue--;
 });
 
 heartlike.addEventListener("click", () => {
-  if (show === 0) {
-    show.innerHTML = showValue++;
-  }
   li = document.createElement("li");
-  li.innerHTML = `${(show.innerHTML = showValue++)} likes ${
-    heartlike.innerHTML
+  li.innerHTML = `${show.innerHTML = showValue++} has been liked ${
+    heartlike.innerHTML + " 1 times"
   }`;
   submitLikesNo.appendChild(li);
 });
@@ -51,11 +48,19 @@ pause.addEventListener("click", () => {
     sub.disabled = false;
     heartlike.disabled = false;
     submit.disabled = false;
-    ResetIntervals();
     intervals = setInterval(counter, 1000);
   }
 });
 
 function ResetIntervals() {
   clearInterval(intervals);
+}
+
+
+// counter
+
+
+function counter() {
+    showValue += 1;
+    show.innerText = showValue;
 }
