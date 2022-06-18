@@ -6,6 +6,13 @@ let likes = document.querySelector(".likes");
 let comment = document.getElementById("list");
 let submit = document.getElementById("submit");
 
+// counter
+function counter() {
+    counterrValue += 1;
+    counterr.innerText = counterrValue;
+}
+
+
 let plus = document.getElementById("plus");
 plus.addEventListener("click", ()=> {
   return (counterr.innerHTML = counterrValue++);
@@ -34,11 +41,6 @@ form.addEventListener("submit", (e) => {
   comment.appendChild(commentArea);
 });
 
-// counter
-function counter() {
-    counterrValue += 1;
-    counterr.innerText = counterrValue;
-}
 
 
 // pause
