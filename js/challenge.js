@@ -18,9 +18,7 @@ sub.addEventListener("click", () => {
 let heartlike = document.getElementById("heart");
 heartlike.addEventListener("click", () => {
   li = document.createElement("li");
-  li.innerHTML = `${counterr.innerHTML = counterrValue++} has been liked ${
-    heartlike.innerHTML + " 1 times"
-  }`;
+  li.innerHTML = `${counterr.innerHTML = counterrValue++} has been liked ${heartlike.innerHTML + " 1 times"}`;
   likes.appendChild(li);
 });
 
@@ -45,7 +43,7 @@ let pause = document.getElementById("pause");
 pause.addEventListener("click", () => {
 if (pause.innerText === "pause") {
 //   set the TEXT to resume
-    pause.innerText = "Resume";
+    pause.innerText = "resume";
     add.dissabled = true;
     sub.disabled = true;
     heartlike.disabled = true;
