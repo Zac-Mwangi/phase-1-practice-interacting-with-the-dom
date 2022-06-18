@@ -47,7 +47,7 @@ pause.addEventListener("click", () => {
 if (pause.innerText === "pause") {
 //   set the TEXT to resume
     pause.innerText = "resume";
-    plus.dissabled = true;
+    plus.disabled = true;
     minus.disabled = true;
     heartlike.disabled = true;
     submit.disabled = true;
